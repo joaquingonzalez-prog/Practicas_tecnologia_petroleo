@@ -3,7 +3,7 @@
 PRÁCTICA 1 - LABORATORIO VIRTUAL: CARACTERIZACIÓN DE CRUDOS (Crude Oil Assay)
 Asignatura: Tecnologías del Petróleo
 =============================================================================
-Autor: Generado para uso educativo
+Autor: José Joaquín González Cortés
 Descripción: Aplicación interactiva que simula un ensayo de caracterización
              de crudo desconocido, guiando al alumno paso a paso.
 =============================================================================
@@ -269,8 +269,9 @@ def inicializar_crudo():
 def render_sidebar():
     with st.sidebar:
         st.markdown("## 🛢️ Laboratorio Virtual")
-        st.markdown("**Asignatura:** Tecnologías del Petróleo")
+        st.markdown("**Asignatura:** Tecnología de Petróleo y Petroquímica. Grado en Ingeniería en Tecnologías Industriales")
         st.markdown("**Práctica 1** – Crude Oil Assay")
+        st.markdown("**Autor:** José Joaquín González Cortés")
         st.divider()
 
         st.markdown("### 📋 Instrucciones")
@@ -323,7 +324,8 @@ def render_header():
     st.markdown("""
     <div class="main-header">
         <h1>🛢️ Práctica 1 — Crude Oil Assay</h1>
-        <p>LABORATORIO VIRTUAL · CARACTERIZACIÓN DE CRUDO DESCONOCIDO · TECNOLOGÍAS DEL PETRÓLEO</p>
+        <p>LABORATORIO VIRTUAL · CARACTERIZACIÓN DE CRUDO DESCONOCIDO · TECNOLOGÍA DEL PETRÓLEO Y PETROQUÍMICA</p>
+        <p>Autor: José Joaquín González Cortés</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -671,7 +673,7 @@ def render_fase4():
             )
 
             st.markdown("**2. Base química del crudo (K_UOP)**")
-            st.caption(f"K_UOP calculado: {ss['kuop_alumno']:.3f}. Indica la base química (Parafínica, Mixta, Nafténica/Asfáltica, Aromática).")
+            st.caption(f"K_UOP calculado: {ss['kuop_alumno']:.3f}. Indica la base química (Parafínica, Mixta, Nafténica/Asfáltica, Aromática) y qué implica.")
             resp2 = st.text_area(
                 "Respuesta 2:", height=100, key="r2",
                 placeholder="Ej: Con K_UOP = X, la base de este crudo es... porque..."
@@ -685,7 +687,7 @@ def render_fase4():
             )
 
             st.markdown("**4. Conclusión y recomendación de compra**")
-            st.caption("Integra todos los parámetros obtenidos y concluye si recomiendas este crudo para una refinería estándar.")
+            st.caption("Integra todos los parámetros obtenidos, concluye si recomiendas este crudo para una refinería estándar y busca su crudo de referencia.")
             resp4 = st.text_area(
                 "Respuesta 4:", height=120, key="r4",
                 placeholder="Ej: En conjunto, este crudo presenta... Por tanto, mi recomendación es..."
@@ -724,6 +726,7 @@ def render_fase4():
 ╚══════════════════════════════════════════════════════════════════╝
 
 Fecha de generación: {fecha}
+Autor:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SECCIÓN 1 — DATOS BRUTOS DE LABORATORIO (Muestra Asignada)
