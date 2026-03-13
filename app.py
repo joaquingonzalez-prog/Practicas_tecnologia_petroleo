@@ -898,7 +898,7 @@ with tab4:
             key="resp_3"
         )
         
-st.markdown("""
+        st.markdown("""
         <div class="warning-box">
         <b>❓ Pregunta 4 – Caracterización del crudo</b>
         </div>
