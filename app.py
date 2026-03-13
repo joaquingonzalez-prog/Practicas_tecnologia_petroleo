@@ -683,11 +683,11 @@ with tab3:
     with col_g1:
         # Curva TBP con zonas sombreadas de corte
         colores_zonas = [
-            ('#06d6a0', 0.25, 'Nafta Ligera / GLP'),
-            ('#388bfd', 0.25, 'Nafta Pesada'),
-            ('#ffd166', 0.25, 'Queroseno / Jet'),
-            ('#ff9d4d', 0.25, 'Gasóleo / Diésel'),
-            ('#f78166', 0.25, 'Residuo Atm.'),
+            ('rgba(6,214,160,0.25)',   'Nafta Ligera / GLP'),
+            ('rgba(56,139,253,0.25)',  'Nafta Pesada'),
+            ('rgba(255,209,102,0.25)', 'Queroseno / Jet'),
+            ('rgba(255,157,77,0.25)',  'Gasóleo / Diésel'),
+            ('rgba(247,129,102,0.25)', 'Residuo Atm.'),
         ]
 
         cortes_vol = [
@@ -701,7 +701,7 @@ with tab3:
         fig_cortes = go.Figure()
 
         # Zonas coloreadas
-        for (v_ini, v_fin), (color, alpha, nombre) in zip(cortes_vol, colores_zonas):
+        for (v_ini, v_fin), (color, nombre) in zip(cortes_vol, colores_zonas):
             if v_fin > v_ini:
                 mascara = (vol_denso >= v_ini) & (vol_denso <= v_fin)
                 x_zona = vol_denso[mascara]
@@ -711,7 +711,7 @@ with tab3:
                         x=np.concatenate([[x_zona[0]], x_zona, [x_zona[-1]], [x_zona[0]]]),
                         y=np.concatenate([[0], y_zona, [0], [0]]),
                         fill='toself',
-                        fillcolor=color.replace('#', 'rgba(').replace(')', f',{alpha})') if False else f'{color}40',
+                        fillcolor=color,
                         line=dict(color='rgba(0,0,0,0)'),
                         name=nombre,
                         hoverinfo='skip',
