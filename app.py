@@ -1028,7 +1028,7 @@ PREGUNTA 3 – Alimentación a la unidad de FCC:
 
 {linea}
 
-PREGUNTA 4 – Caracterización del crudo:
+PREGUNTA 4 – Caracterización de el crudo:
 {r4 if r4.strip() else "(Sin respuesta)"}
 
 {linea}
