@@ -897,7 +897,42 @@ with tab4:
             placeholder="Escribe aquí tu respuesta...",
             key="resp_3"
         )
+        
+st.markdown("""
+        <div class="warning-box">
+        <b>❓ Pregunta 4 – Caracterización del crudo</b>
+        </div>
+        """, unsafe_allow_html=True)
+        respuesta_4 = st.text_area(
+            "A la vista de los rendimientos volumétricos obtenidos con tu semilla actual (fíjate especialmente en el porcentaje de Residuo Atmosférico frente a los destilados ligeros), ¿clasificarías este crudo como ligero, medio o pesado? Justifica tu respuesta.",
+            height=130,
+            placeholder="Escribe aquí tu respuesta...",
+            key="resp_4"
+        )
 
+        st.markdown("""
+        <div class="warning-box">
+        <b>❓ Pregunta 5 – Límites termodinámicos y Destilación a Vacío</b>
+        </div>
+        """, unsafe_allow_html=True)
+        respuesta_5 = st.text_area(
+            "El Punto Final de Ebullición (FBP) del Gasóleo Pesado y el inicio del Residuo Atmosférico suele limitarse a unos 360-380 °C. ¿Por qué no se calienta el horno del crudo a 450 °C para seguir destilando más fracciones a presión atmosférica? ¿Qué proceso químico indeseado ocurriría?",
+            height=130,
+            placeholder="Escribe aquí tu respuesta...",
+            key="resp_5"
+        )
+
+        st.markdown("""
+        <div class="warning-box">
+        <b>❓ Pregunta 6 – Separación Real vs. Teórica (Gap y Overlap)</b>
+        </div>
+        """, unsafe_allow_html=True)
+        respuesta_6 = st.text_area(
+            "En esta simulación TBP, los cortes son perfectos (ej. la Nafta termina exactamente a los 160 °C y el Queroseno empieza a los 160 °C). En los productos extraídos de una torre de destilación industrial real, ¿ocurre esto o existe solapamiento (overlap) de temperaturas de ebullición entre productos adyacentes? Razona por qué.",
+            height=130,
+            placeholder="Escribe aquí tu respuesta...",
+            key="resp_6"
+        )
         st.markdown("---")
 
         nombre_alumno = st.text_input("👤 Nombre y apellidos del alumno:", placeholder="Introduce tu nombre completo")
@@ -992,6 +1027,20 @@ PREGUNTA 3 – Alimentación a la unidad de FCC:
 {r3 if r3.strip() else "(Sin respuesta)"}
 
 {linea}
+
+PREGUNTA 4 – Caracterización del crudo:
+{r4 if r4.strip() else "(Sin respuesta)"}
+
+{linea}
+
+PREGUNTA 5 – Límites termodinámicos y Destilación a Vacío
+{r5 if r5.strip() else "(Sin respuesta)"}
+
+{linea}
+
+PREGUNTA 6 – Separación Real vs. Teórica (Gap y Overlap)
+{r6 if r6.strip() else "(Sin respuesta)"}
+
 FIN DEL INFORME – Práctica 2 / Tecnologías del Petróleo
 {linea}
 """
